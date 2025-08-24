@@ -3,6 +3,9 @@
 	"name": "Plush",
 	"patterns": [
 		{
+			"include": "#comments"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
@@ -10,10 +13,23 @@
 		}
 	],
 	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.plush",
+					"match": "//.*$"
+				},
+				{
+					"name": "comment.block.plush",
+					"begin": "/\\*",
+					"end": "\\*/"
+				}
+			]
+		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.plush",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(if|while|for|return|loop)\\b"
 			}]
 		},
 		"strings": {
