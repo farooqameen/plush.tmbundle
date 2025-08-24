@@ -1,7 +1,5 @@
 # plush.tmbundle
 
-# plush README
-
 This is the README for your extension "plush". After writing up a brief description, we recommend including the following sections.
 
 ## Features
@@ -51,6 +49,11 @@ Added features X, Y, and Z.
 
 ---
 
+## Sources and Gudies
+
+* Your First Extension [https://code.visualstudio.com/api/get-started/your-first-extension] by Visual Studio Code
+* Create Custom Syntax Highlighting in VS Code [https://www.youtube.com/watch?v=5msZv-nKebI] by Tommy Ngo
+
 ## Working with Markdown
 
 You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
@@ -63,5 +66,6 @@ You can author your README using Visual Studio Code. Here are some useful editor
 
 * [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+
 
 **Enjoy!**

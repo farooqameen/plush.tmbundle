@@ -16,7 +16,7 @@
 		"comments": {
 			"patterns": [
 				{
-					"name": "comment.line.plush",
+					"name": "comment.line.double-dash.plush",
 					"match": "//.*$"
 				},
 				{
@@ -27,10 +27,20 @@
 			]
 		},
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.plush",
-				"match": "\\b(if|while|for|return|loop)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.plush",
+					"match": "\\b(if|while|for|return|loop)\\b"
+				},
+				{
+					"name": "storage.type.plush",
+					"match": "\\b(let)\\s+(var)\\b"
+				},
+				{
+					"name": "storage.type.plush",
+					"match": "\\b(let)\\b(?!\\s+var)"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.plush",
