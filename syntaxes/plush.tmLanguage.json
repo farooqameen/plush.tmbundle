@@ -1,82 +1,85 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Plush",
-	"patterns": [
-		{
-			"include": "#comments"
-		},
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
-	"repository": {
-		"comments": {
-			"patterns": [
-				{
-					"name": "comment.line.double-dash.plush",
-					"match": "//.*$"
-				},
-				{
-					"name": "comment.block.plush",
-					"begin": "/\\*",
-					"end": "\\*/"
-				}
-			]
-		},
-		"keywords": {
-			"patterns": [
-				{
-					"name": "keyword.control.plush",
-					"match": "\\b(if|while|for|return|loop)\\b"
-				},
-				{
-					"name": "storage.type.plush",
-					"match": "\\b(let)\\s+(var)\\b"
-				},
-				{
-					"name": "storage.type.plush",
-					"match": "\\b(let)\\b(?!\\s+var)"
-				}
-			]
-		},
-		"host-functions": {
-			"patterns": [
-				{
-					"name": "support.function.host.plush",
-					"match": "\\b(time_current_ms)\\b"
-				},
-				{
-					"name": "support.function.host.plush",
-					"match": "\\b(print|println|readln)\\b"
-				},
-				{
-					"name": "support.function.host.plush",
-					"match": "\\b(actor_id|actor_parent|actor_sleep|actor_spawn|actor_join|actor_send|actor_recv|actor_poll)\\b"
-				},
-				{
-					"name": "support.function.host.plush",
-					"match": "\\b(window_create|window_draw_frame)\\b"
-				},
-				{
-					"name": "support.function.host.plush",
-					"match": "\\b(exit)\\b"
-				}
-			]
-		},
-		"strings": {
-			"name": "string.quoted.double.plush",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.plush",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "source.pls"
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Plush",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#host-functions"
+        },
+        {
+            "include": "#strings"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-dash.plush",
+                    "match": "//.*$"
+                },
+                {
+                    "name": "comment.block.plush",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.plush",
+                    "match": "\\b(if|while|for|return|loop)\\b"
+                },
+                {
+                    "name": "storage.type.plush",
+                    "match": "\\b(let)\\s+(var)\\b"
+                },
+                {
+                    "name": "storage.type.plush",
+                    "match": "\\b(let)\\b(?!\\s+var)"
+                }
+            ]
+        },
+        "host-functions": {
+            "patterns": [
+                {
+                    "name": "support.function.host.plush",
+                    "match": "\\$(time_current_ms)\\s*\\("
+                },
+                {
+                    "name": "support.function.host.plush",
+                    "match": "\\$(print|println|readln)\\s*\\("
+                },
+                {
+                    "name": "support.function.host.plush",
+                    "match": "\\$(actor_id|actor_parent|actor_sleep|actor_spawn|actor_join|actor_send|actor_recv|actor_poll)\\s*\\("
+                },
+                {
+                    "name": "support.function.host.plush",
+                    "match": "\\$(window_create|window_draw_frame)\\s*\\("
+                },
+                {
+                    "name": "support.function.host.plush",
+                    "match": "\\$(exit)\\s*\\("
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.plush",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.plush",
+                    "match": "\\\\."
+                }
+            ]
+        }
+    },
+    "scopeName": "source.pls"
 }
