@@ -42,6 +42,30 @@
 				}
 			]
 		},
+		"host-functions": {
+			"patterns": [
+				{
+					"name": "support.function.host.plush",
+					"match": "\\b(time_current_ms)\\b"
+				},
+				{
+					"name": "support.function.host.plush",
+					"match": "\\b(print|println|readln)\\b"
+				},
+				{
+					"name": "support.function.host.plush",
+					"match": "\\b(actor_id|actor_parent|actor_sleep|actor_spawn|actor_join|actor_send|actor_recv|actor_poll)\\b"
+				},
+				{
+					"name": "support.function.host.plush",
+					"match": "\\b(window_create|window_draw_frame)\\b"
+				},
+				{
+					"name": "support.function.host.plush",
+					"match": "\\b(exit)\\b"
+				}
+			]
+		},
 		"strings": {
 			"name": "string.quoted.double.plush",
 			"begin": "\"",
