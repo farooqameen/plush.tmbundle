@@ -13,12 +13,12 @@
     "languages": [{
       "id": "plush",
       "aliases": ["Plush", "plush"],
-      "extensions": [".pls"],
+      "extensions": [".psh"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
       "language": "plush",
-      "scopeName": "source.pls",
+      "scopeName": "source.psh",
       "path": "./syntaxes/plush.tmLanguage.json"
     }]
   }

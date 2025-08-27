@@ -6,6 +6,9 @@
             "include": "#comments"
         },
         {
+            "include": "#class"
+        },
+        {
             "include": "#keywords"
         },
         {
@@ -13,6 +16,9 @@
         },
         {
             "include": "#strings"
+        },
+        {
+            "include": "#punctuation"
         }
     ],
     "repository": {
@@ -34,13 +40,6 @@
                 {
                     "name": "keyword.control.plush",
                     "match": "\\b(if|while|for|return|loop)\\b"
-                },
-                {
-                    "match": "\\b(class)\\s+([A-Za-z_][A-Za-z0-9_]*)",
-                    "captures": {
-                        "1": { "name": "storage.type.class.plush" },
-                        "2": { "name": "entity.name.type.class.plush" }
-                    }
                 },
                 {
                     "match": "\\b(fun)\\s+([A-Za-z_][A-Za-z0-9_]*)(?=\\s*\\()",
@@ -90,6 +89,74 @@
                 }
             ]
         },
+        "class": {
+            "patterns": [
+                {
+                    "name": "meta.class.plush",
+                    "begin": "\\b(class)\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*\\{",
+                    "beginCaptures": {
+                        "1": { "name": "storage.type.class.plush" },
+                        "2": { "name": "entity.name.type.class.plush" }
+                    },
+                    "end": "\\}",
+                    "patterns": [
+                        {
+                            "include": "#comments"
+                        },
+                        {
+                            "include": "#strings"
+                        },
+                        {
+                            "include": "#keywords"
+                        },
+                        {
+                            "name": "meta.method.plush",
+                            "begin": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s*\\(",
+                            "beginCaptures": {
+                                "1": { "name": "entity.name.function.method.plush" }
+                            },
+                            "end": "\\)",
+                            "patterns" : [
+                                {
+                                    "name": "variable.language.self.plush",
+                                    "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\b(?=\\s*,|\\s*\\))"
+                                },
+                                {
+                                    "name": "punctuation.separator.parameter.plush",
+                                    "match": ","
+                                },
+                                {
+                                    "name": "variable.parameter.plush",
+                                    "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\b"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "meta.method.body.plush",
+                            "begin": "(?<=\\))\\s*\\{",
+                            "end": "\\}",
+                            "patterns": [
+                                {
+                                    "include": "#comments"
+                                },
+                                {
+                                    "include": "#strings"
+                                },
+                                {
+                                    "include": "#keywords"
+                                },
+                                {
+                                    "include": "#host-functions"
+                                },
+                                {
+                                    "include": "#punctuation"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         "strings": {
             "name": "string.quoted.double.plush",
             "begin": "\"",
@@ -98,6 +165,14 @@
                 {
                     "name": "constant.character.escape.plush",
                     "match": "\\\\."
+                }
+            ]
+        },
+        "punctuation": {
+            "patterns": [
+                {
+                    "name": "punctuation.terminator.statement.plush",
+                    "match": ";"
                 }
             ]
         }
