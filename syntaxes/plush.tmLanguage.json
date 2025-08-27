@@ -9,6 +9,12 @@
             "include": "#class"
         },
         {
+            "include": "#constructor"
+        },
+        {
+            "include": "#builtin-functions"
+        },
+        {
             "include": "#keywords"
         },
         {
@@ -93,7 +99,7 @@
             "patterns": [
                 {
                     "name": "meta.class.plush",
-                    "begin": "\\b(class)\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*\\{",
+                    "begin": "\\b(class)\\s+([A-Z][A-Za-z0-9_]*)\\s*\\{",
                     "beginCaptures": {
                         "1": { "name": "storage.type.class.plush" },
                         "2": { "name": "entity.name.type.class.plush" }
@@ -157,6 +163,28 @@
                 }
             ]
         },
+        "constructor": {
+            "patterns": [
+                {
+                    "name": "meta.function.constructor.plush",
+                    "match": "(?<!\\.)([A-Z][A-Za-z0-9_]*)\\s*(?=\\()",
+                    "captures": {
+                        "1": { "name": "entity.name.type.constructor.plush" }
+                    }
+                }
+            ]
+        },
+        "builtin-functions": {
+            "patterns": [
+                {
+                    "name": "meta.function.builtin.plush",
+                    "match": "(?<=\\.)([a-z][a-zA-Z0-9_]*)\\s*(?=\\()",
+                    "captures": {
+                        "1": { "name": "entity.name.function.builtin.plush" }
+                    }
+                }
+            ]
+        },
         "strings": {
             "name": "string.quoted.double.plush",
             "begin": "\"",
@@ -177,5 +205,5 @@
             ]
         }
     },
-    "scopeName": "source.pls"
+    "scopeName": "source.psh"
 }

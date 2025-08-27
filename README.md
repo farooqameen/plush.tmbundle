@@ -23,3 +23,4 @@ A syntax highlighting extension for [Plush](https://github.com/maximecb/plush) (
 
 - [Your First Extension](https://code.visualstudio.com/api/get-started/your-first-extension) by Visual Studio Code
 - [Create Custom Syntax Highlighting in VS Code](https://www.youtube.com/watch?v=5msZv-nKebI) by Tommy Ngo
+- [Language Grammars](https://macromates.com/manual/en/language_grammars) by TextMate
