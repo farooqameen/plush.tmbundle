@@ -6,10 +6,10 @@
             "include": "#comments"
         },
         {
-            "include": "#keywords"
+            "include": "#class"
         },
         {
-            "include": "#class"
+            "include": "#keywords"
         },
         {
             "include": "#constructor"
@@ -97,10 +97,6 @@
                 {
                     "name": "constant.language.null.plush",
                     "match": "\\b(nil)\\b"
-                },
-                {
-                    "name": "storage.type.class.plush",
-                    "match": "\\b(class)\\b"
                 },
                 {
                     "match": "\\b(fun)\\s+([A-Za-z_][A-Za-z0-9_]*)(?=\\s*\\()",
@@ -281,6 +277,9 @@
                         },
                         {
                             "include": "#operators"
+                        },
+                        {
+                            "include": "#variables"
                         },
                         {
                             "include": "#punctuation"
