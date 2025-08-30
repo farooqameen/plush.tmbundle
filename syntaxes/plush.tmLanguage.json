@@ -389,27 +389,56 @@
             ]
         },
         "strings": {
-            "name": "string.quoted.double.plush",
-            "begin": "\"",
-            "beginCaptures": {
-                "0": {
-                    "name": "punctuation.definition.string.begin.plush"
-                }
-            },
-            "end": "\"",
-            "endCaptures": {
-                "0": {
-                    "name": "punctuation.definition.string.end.plush"
-                }
-            },
             "patterns": [
                 {
-                    "name": "constant.character.escape.plush",
-                    "match": "\\\\([\\\\\"/bfnrt]|u[0-9A-Fa-f]{4})"
+                    "name": "string.quoted.double.plush",
+                    "begin": "\"",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.begin.plush"
+                        }
+                    },
+                    "end": "\"",
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.end.plush"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.plush",
+                            "match": "\\\\([\\\\\"/bfnrt]|u[0-9A-Fa-f]{4})"
+                        },
+                        {
+                            "name": "invalid.illegal.unrecognized-string-escape.plush",
+                            "match": "\\\\."
+                        }
+                    ]
                 },
                 {
-                    "name": "invalid.illegal.unrecognized-string-escape.plush",
-                    "match": "\\\\."
+                    "name": "string.quoted.single.plush",
+                    "begin": "'",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.begin.plush"
+                        }
+                    },
+                    "end": "'",
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.end.plush"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.plush",
+                            "match": "\\\\([\\\\\\'/bfnrt]|u[0-9A-Fa-f]{4})"
+                        },
+                        {
+                            "name": "invalid.illegal.unrecognized-string-escape.plush",
+                            "match": "\\\\."
+                        }
+                    ]
                 }
             ]
         },
