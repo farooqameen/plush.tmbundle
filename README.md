@@ -11,7 +11,7 @@ A syntax highlighting extension for [Plush](https://github.com/maximecb/plush) (
 2. Install the extension:
     - Press Ctrl+Shift+P (or Cmd+Shift+P on macOS)
     - Type `Extensions: Install from VSIX...` and press Enter
-    - Select the `.vsix` file.
+    - Select the `.vsix` file
 
 3. Reload VS Code:
     - Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on macOS)
