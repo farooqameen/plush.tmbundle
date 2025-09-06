@@ -4,16 +4,32 @@ A syntax highlighting extension for [Plush](https://github.com/maximecb/plush) (
 
 ## Installation
 
-1. Locate your VS Code extensions directory:
-    - Windows: `%USERPROFILE%\.vscode\extensions\`
-    - macOS: `~/.vscode/extensions/`
-    - Linux: `~/.vscode/extensions/`
+### Using .vsix
 
-2. Copy `plush.tmbundle` to your VS Code extensions directory
+1. Download the `plush-1.0.0.vsix` file from the [releases](https://github.com/farooqameen/plush.tmbundle/releases) page.
+
+2. Install the extension:
+    - Press Ctrl+Shift+P (or Cmd+Shift+P on macOS)
+    - Type `Extensions: Install from VSIX...` and press Enter
+    - Select the `.vsix` file.
 
 3. Reload VS Code:
-    - Press Ctrl+Shift+P (or Cmd+Shift+P on macOS)
-    - Type "Developer: Reload Window" and press Enter
+    - Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on macOS)
+    - Type `Developer: Reload Window` and press Enter
+
+### Manually
+
+1. Clone this repository
+
+2. Locate your VS Code extensions directory:
+    - Windows: `%USERPROFILE%\.vscode\extensions\`
+    - macOS/Linux: `~/.vscode/extensions/`
+
+3. Copy `plush.tmbundle` to your VS Code extensions directory
+
+4. Reload VS Code:
+    - Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on macOS)
+    - Type `Developer: Reload Window` and press Enter
 
 ## Limitations
 
