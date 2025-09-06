@@ -1,8 +1,12 @@
 {
   "name": "plush",
   "displayName": "Plush",
-  "description": "Plush Experimental Toy Programming Language",
-  "version": "0.0.1",
+  "description": "Syntax highlighting for Plush using TextMate grammar",
+  "version": "1.0.0",
+  "repository": "https://github.com/farooqameen/plush.tmbundle.git",
+  "publisher": "farooqameen",
+  "license": "MIT",
+
   "engines": {
     "vscode": "^1.103.0"
   },
